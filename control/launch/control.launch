@@ -1,6 +1,6 @@
 <launch>
 	<!-- Load joint controller configurations from YAML file to parameter server -->
-	<rosparam file="$(find nostop_robot_control)/config/nostop_control.yaml" command="load"/>
+	<rosparam file="$(find nostop_robot_control)/config/control.yaml" command="load"/>
 
 	<!-- load the controllers -->
 	<node name="controller_spawner"

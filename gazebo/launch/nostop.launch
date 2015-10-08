@@ -1,6 +1,6 @@
 <launch>
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
-		<arg name="world_name" value="$(find nostop_robot_gazebo)/worlds/nostop_robot.world"/>
+		<arg name="world_name" value="$(find nostop_robot_gazebo)/worlds/nostop.world"/>
 		<arg name="gui" value="true"/>
 	</include>
 	
@@ -14,6 +14,6 @@
 	args="-urdf -param robot_description -model nostop" />
 	
 	<!-- ros_control mybot launch file -->
-	<include file="$(find nostop_robot_control)/launch/nostop_control.launch" />
+	<include file="$(find nostop_robot_control)/launch/control.launch" />
 	
 </launch>
