@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="nostop" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="nostop_thief" xmlns:xacro="http://www.ros.org/wiki/xacro">
         <!-- Put here the robot description -->
   
 <xacro:property name="PI" value="3.1415926535897931"/>
@@ -45,7 +45,7 @@
     <geometry> 
       <box size="${chassisLength} ${chassisWidth} ${chassisHeight}"/> 
     </geometry> 
-    <material name="orange"/>
+    <material name="blue"/>
   </visual>
   <inertial> 
     <origin xyz="0 0 ${wheelRadius}" rpy="0 0 0"/> 
@@ -55,7 +55,7 @@
 </link>
 
 <gazebo reference="chassis">
-  <material>Gazebo/Orange</material>
+  <material>Gazebo/Blue</material>
 </gazebo>
 
 <joint name="fixed" type="fixed">
