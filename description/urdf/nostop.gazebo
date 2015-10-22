@@ -2,4 +2,26 @@
   <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
     <robotNamespace>/mybot</robotNamespace>
   </plugin>
+  
+  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+    <rosDebugLevel>Debug</rosDebugLevel>
+    <publishWheelTF>false</publishWheelTF>
+    <publishWheelJointState>true</publishWheelJointState>
+    <alwaysOn>true</alwaysOn>
+    <leftJoint>left_wheel_rot_joint</leftJoint>
+    <rightJoint>right_wheel_rot_joint</rightJoint>
+    <wheelSeparation>0.32</wheelSeparation>
+    <wheelDiameter>0.14</wheelDiameter>
+    <torque>20</torque>
+    <wheelAcceleration>1.8</wheelAcceleration>
+    <commandTopic>cmd_vel</commandTopic>
+    <odometryTopic>odom</odometryTopic>
+    <odometryFrame>odom</odometryFrame>
+    <odometrySource>encoder</odometrySource>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <updateRate>10.0</updateRate>
+  </plugin>
+  
+  
 </gazebo>
+
